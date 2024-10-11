@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background-color: #aba59d;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+/* Top Sidebar */
+.Side {
+    width: 1700px;
+    height: 125px;
+    background-color: #52504d;
+    opacity: 5;
+    /*  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Logo */
+
+.logo {
+    padding-top: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 355px;
+    height: 80px;
+}
+
+.logo_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.logo_text {
+    margin-top: 15px;
+    color: #0b1bf6;
+    text-shadow: 0 -1px 1px #9dcaed,
+        0 -2px 2px #719dde,
+        0 -3px 3px #5074d7,
+        0 -10px 20px #3761f8,
+        0 -20px 30px #1d2ff3;
+    font-size: 45px;
+    margin-left: 15px;
+}
+
+/* hom */
+.Home {
+    padding-top: 25px;
+    color: #0b1bf6;
+    background-color: #74716e;
+    width: 355;
+    height: 80;
+    font-size: 45px;
+    border-radius: 25%;
+    text-shadow: 0 -1px 1px #9dcaed,
+        0 -2px 2px #719dde,
+        0 -3px 3px #5074d7,
+        0 -10px 20px #3761f8,
+        0 -20px 30px #1d2ff3;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* part 1 */
+.Part1 {
+    background: url("resource/background.jpg");
+    height: 1200px;
+    width: 1700px;
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 350px;
+
+}
+
+.Part1_main {
+    height: 500px;
+    width: 800px;
+    background-color: #52504d;
+    margin-left: 450px;
+    margin-top: 100;
+    border-radius: 8.5%;
+    padding-top: 120px;
+}
+
+.discord_href {
+    width: 400px;
+    height: 160px;
+    background: url(resource/Logo.png);
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border-radius: 11.2%;
+    margin-top: 120px;
+    margin-left: 200px;
+    text-align: center;
+    line-height: 150px;
+
+}
+
+.Join {
+    font-size: 45px;
+    color: #3c00ff;
+    text-decoration: none;
+}
+
+.Join:hover {
+    text-decoration: underline;
+}
+
+/* Part 2 */
+.Part2 {
+    height: 1000px;
+    width: 1700px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 400px;
+}
+
+.block {
+    height: 60vh;
+    aspect-ratio: 6 / 4;
+    border-radius: 10px;
+    margin: 3em;
+    background: #eaeaea;
+    box-sizing: border-box;
+}
+
+
+.inner {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner p {
+    padding: 3em;
+}
+
+.shadow {
+    position: absolute;
+    height: 40vh;
+    aspect-ratio: 3 / 4;
+    background: #cdcdcd;
+    z-index: -1;
+}
