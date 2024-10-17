@@ -16,30 +16,19 @@ document.addEventListener("mousemove", function (e) {
   box2.style.transform = `rotateX(${-degY}deg) rotateY(${degX}deg)`;
 });
 
-// coffy
-let Iron_card = document.querySelector(".Iron_p");
-document.addEventListener("mousemove", function (e) {
-  let Tx = e.pageX - window.innerWidth / 7;
-  let Ty = e.pageY - window.innerHeight / 7;
-  let TegX = (20 * dx) / window.innerWidth / 7;
-  let TegY = (20 * dy) / window.innerHeight / 7;
-  Iron_card.style.transform = `rotateX(${-TegY}deg) rotateY(${TegX}deg)`;
-});
+// dinamic page
+document.addEventListener("DOMContentLoaded", function () {
+  const card = document.querySelectorAll(".Mor_inf");
+  const home_btn = document.querySelector(".Home");
 
-let Gold_card = document.querySelector(".Gold_p");
-document.addEventListener("mousemove", function (e) {
-  let Hx = e.pageX - window.innerWidth / 2;
-  let Hy = e.pageY - window.innerHeight / 2;
-  let HegX = (20 * dx) / window.innerWidth / 2;
-  let HegY = (20 * dy) / window.innerHeight / 2;
-  Gold_card.style.transform = `rotateX(${-HegY}deg) rotateY(${HegX}deg)`;
-});
-
-let Diamond_card = document.querySelector(".Diamond_p");
-document.addEventListener("mousemove", function (e) {
-  let Dx = e.pageX - window.innerWidth / 2;
-  let Dy = e.pageY - window.innerHeight / 2;
-  let DegX = (20 * dx) / window.innerWidth / 2;
-  let DegY = (20 * dy) / window.innerHeight / 2;
-  Diamond_card.style.transform = `rotateX(${-DegY}deg) rotateY(${DegX}deg)`;
+  card.forEach(function (cycle) {
+    cycle.addEventListener("click", function () {
+      const cardId = cycle.getAttribute("data-id");
+      console.log(cardId);
+      window.location.href = `detail.html?id=${cardId}`;
+    });
+    home_btn.addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  });
 });

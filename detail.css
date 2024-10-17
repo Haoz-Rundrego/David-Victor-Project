@@ -1,0 +1,58 @@
+/* Top Sidebar */
+.Side {
+    width: 1700px;
+    height: 125px;
+    background-color: #52504d;
+    opacity: 5;
+    /*  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Logo */
+
+.logo {
+    padding-top: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 355px;
+    height: 80px;
+}
+
+.logo_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.logo_text {
+    margin-top: 15px;
+    color: #0b1bf6;
+    text-shadow: 0 -1px 1px #9dcaed,
+        0 -2px 2px #719dde,
+        0 -3px 3px #5074d7,
+        0 -10px 20px #3761f8,
+        0 -20px 30px #1d2ff3;
+    font-size: 45px;
+    margin-left: 15px;
+}
+
+/* hom */
+.Home {
+    padding-top: 25px;
+    color: #0b1bf6;
+    background-color: #74716e;
+    width: 355;
+    height: 80;
+    font-size: 45px;
+    border-radius: 25%;
+    text-shadow: 0 -1px 1px #9dcaed,
+        0 -2px 2px #719dde,
+        0 -3px 3px #5074d7,
+        0 -10px 20px #3761f8,
+        0 -20px 30px #1d2ff3;
+    padding-left: 15px;
+    padding-right: 15px;
+}

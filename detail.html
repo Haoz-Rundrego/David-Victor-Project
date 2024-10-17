@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Project</title>
+    <!-- links -->
+    <link rel="stylesheet" href="detail.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3948566989.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLF3JRZY91"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JLF3JRZY91');
+    </script>
+</head>
+
+<body>
+    <!-- el page -->
+    <div id="Card_page">
+        loading...:(
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const CardId = params.get("id");
+            console.log(CardId)
+            const CardDetailsContainer = document.getElementById(".Card_page");
+            const CardData = {
+                Crad_iron: {
+                    card_name: "Iron",
+                    description: "",
+                    bonus: "",
+                    command: "",
+                    price: "",
+                },
+                Crad_gold: {},
+                Crad_diamond: {},
+            }
+            if (CradData[CardId]) {
+                const card = adData[CardId];
+                CardDetailsContainer.innerHTML = `
+                // верхній
+                <!-- SideBar -->
+    <nav class="Side">
+        <!-- log -->
+        <div class="logo">
+            <div class="logo_img"><img class="logo_img" src="resource/logo_mini.png"></div>
+            <div class="logo_text">Delta Project</div>
+        </div>
+        <!-- hom -->
+        <div class="Home">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </div>
+    </nav>
+                `
+            }
+        })
+    </script>
+</body>
+
+</html>
