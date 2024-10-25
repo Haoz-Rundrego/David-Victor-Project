@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background-color: #363435;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
 /* Top Sidebar */
 .Side {
     width: 1700px;

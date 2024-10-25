@@ -30,40 +30,70 @@
         document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(window.location.search);
             const CardId = params.get("id");
-            console.log(CardId)
-            const CardDetailsContainer = document.getElementById(".Card_page");
+            console.log(CardId);
+            const CardDetailsContainer = document.getElementById("Card_page"); // без точки
+
             const CardData = {
                 Crad_iron: {
-                    card_name: "Iron",
+                    name: "Prefics: Iron",
                     description: "Іthe Iron prefix is ​​your entry pass to the community of the chosen on our Minecraft server. Although it is the smallest donation, the prefix still gives you a number of advantages that will make your game more comfortable and interesting.",
                     bonus: "available kit",
-                    command: "/kit; /tpa;",
+                    command: "/kit;",
+                    command2: "/tpa;",
+                    command3: "not available<i class='fa-solid fa-ban'></i>",
+                    command4: "not available<i class='fa-solid fa-ban'></i>",
+                    command5: "not available<i class='fa-solid fa-ban'></i>",
+                    command6: "not available<i class='fa-solid fa-ban'></i>",
+                    command7: "not available<i class='fa-solid fa-ban'></i>",
+                    command8: "not available<i class='fa-solid fa-ban'></i>",
+                    command9: "not available<i class='fa-solid fa-ban'></i>",
+                    command10: "not available<i class='fa-solid fa-ban'></i>",
                     price: "25",
+                    img: "resource/Iron.jpg",
+
                 },
 
                 Crad_gold: {
-                    card_name:"Gold",
-                    description:" Gold is a badge of luxury and recognition on our Minecraft server. It gives you significant advantages that will set you apart from other players and make the game even more exciting.",
-                    bonus:"available kit",
-                    command:"/kit; /tpa; /home (2 point); /fead; /hat;",
-                    price:"65"
-
+                    name: "Prefics: Gold",
+                    description: " Gold is a badge of luxury and recognition on our Minecraft server. It gives you significant advantages that will set you apart from other players and make the game even more exciting.",
+                    bonus: "available kit",
+                    command: "/kit;",
+                    command2: "/tpa;",
+                    command3: "/home (2 point);",
+                    command4: "/fead;",
+                    command5: "/hat;",
+                    command6: "not available<i class='fa-solid fa-ban'></i>",
+                    command7: "not available<i class='fa-solid fa-ban'></i>",
+                    command8: "not available<i class='fa-solid fa-ban'></i>",
+                    command9: "not available<i class='fa-solid fa-ban'></i>",
+                    command10: "not available<i class='fa-solid fa-ban'></i>",
+                    price: "65",
+                    img: "resource/Gold.jpg",
 
                 },
 
 
                 Crad_diamond: {
-                    card_name:"diamond",
-                    description:"The Diamond rank is the epitome of prestige, power and limitless possibilities on our Minecraft server.It is designed for the most demanding players who want the best gaming experience.",
-                    bonus:"available kit",
-                    command:"/kit; /tpa; /home (5 point); /fead; /hat; /music; /repair; /clear; /fly; /mute(up to 30 minutes)",
-                    price:"99.99",
+                    name: "Prefics: Diamond",
+                    description: "The Diamond rank is the epitome of prestige, power and limitless possibilities on our Minecraft server.It is designed for the most demanding players who want the best gaming experience.",
+                    bonus: "available kit",
+                    command: "/kit;",
+                    command2: "/tpa;",
+                    command3: "/home (2 point);",
+                    command4: "/fead;",
+                    command5: "/hat;",
+                    command6: "/music;",
+                    command7: "/repair;",
+                    command8: "/clear;",
+                    command9: "/fly",
+                    command10: "/mute (up to 30 minutes)",
+                    price: "99.99",
+                    img: "resource/Diamond.jpg",
                 },
             }
-            if (CradData[CardId]) {
-                const card = adData[CardId];
+            if (CardData[CardId]) {
+                const card = CardData[CardId];
                 CardDetailsContainer.innerHTML = `
-                // верхній
                 <!-- SideBar -->
     <nav class="Side">
         <!-- log -->
@@ -76,11 +106,43 @@
             <i class="fa-solid fa-house"></i>
             Home
         </div>
-    </nav>
+    </nav>  
+            <div class="main_content">
+                <div class="content_img_text">
+                <div class="content_img"><img src="${card.img}"></div>
+                <div class="content_text">
+                    <h1>${card.name}</h1>
+                    <h2>Price: ${card.price}<i class="fa-solid fa-hryvnia-sign"></i></h2>
+                    <h3>all transactions go through our Discord server</h3>
+                    <button class="join">Discord<i class="fa-brands fa-discord"></i></button>
+                </div>    
+            </div>
+            <div class="descr">
+                <h1 class="descr">Description:</h1>
+                <h2>Commands:</h2>
+                <ul>
+                    <li>${card.command}</li>
+                    <li>${card.command2}</li>
+                    <li>${card.command3}</li>
+                    <li>${card.command4}</li>
+                    <li>${card.command5}</li>
+                    <li>${card.command6}</li>
+                    <li>${card.command7}</li>
+                    <li>${card.command8}</li>
+                    <li>${card.command9}</li>
+                    <li>${card.command10}</li>
+                </ul>
+                <h2>Bonus:</h2>
+
+            </div>
+            </div>
+            <footer>
+            </footer>
                 `
             }
         })
     </script>
+
 </body>
 
 </html>
