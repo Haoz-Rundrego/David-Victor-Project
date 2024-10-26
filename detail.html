@@ -36,7 +36,9 @@
             const CardData = {
                 Crad_iron: {
                     name: "Prefics: Iron",
-                    description: "Іthe Iron prefix is ​​your entry pass to the community of the chosen on our Minecraft server. Although it is the smallest donation, the prefix still gives you a number of advantages that will make your game more comfortable and interesting.",
+                    description: "Іthe Iron prefix is ​​your entry pass to the community of the chosen on our Minecraft server.",
+                    description2: " Although it is the smallest donation, the prefix still gives you a number of advantages that will make your game more comfortable and interesting.",
+                    description3: "",
                     bonus: "available kit",
                     command: "/kit;",
                     command2: "/tpa;",
@@ -55,7 +57,9 @@
 
                 Crad_gold: {
                     name: "Prefics: Gold",
-                    description: " Gold is a badge of luxury and recognition on our Minecraft server. It gives you significant advantages that will set you apart from other players and make the game even more exciting.",
+                    description: " Gold is a badge of luxury and recognition on our Minecraft server.",
+                    description2: " It gives you significant advantages that will set you apart from other players and make the game even more exciting.",
+                    description3: "",
                     bonus: "available kit",
                     command: "/kit;",
                     command2: "/tpa;",
@@ -75,7 +79,9 @@
 
                 Crad_diamond: {
                     name: "Prefics: Diamond",
-                    description: "The Diamond rank is the epitome of prestige, power and limitless possibilities on our Minecraft server.It is designed for the most demanding players who want the best gaming experience.",
+                    description: "The Diamond rank is the epitome of prestige,",
+                    description2: "power and limitless possibilities on our Minecraft server.",
+                    description3: "It is designed for the most demanding players who want the best gaming experience.",
                     bonus: "available kit",
                     command: "/kit;",
                     command2: "/tpa;",
@@ -102,24 +108,29 @@
             <div class="logo_text">Delta Project</div>
         </div>
         <!-- hom -->
-        <div class="Home">
+        <div class="home_div">
+        <button class="Home_btn">
             <i class="fa-solid fa-house"></i>
             Home
+        </button>
         </div>
     </nav>  
             <div class="main_content">
                 <div class="content_img_text">
-                <div class="content_img"><img src="${card.img}"></div>
+                <div class="content_img"><img class="content_img" src="${card.img}"></div>
                 <div class="content_text">
-                    <h1>${card.name}</h1>
-                    <h2>Price: ${card.price}<i class="fa-solid fa-hryvnia-sign"></i></h2>
-                    <h3>all transactions go through our Discord server</h3>
+                    <h1 class="title">${card.name}</h1>
+                    <h2 class="price">Price: ${card.price}<i class="fa-solid fa-hryvnia-sign"></i></h2>
+                    <h3 class="price_s">all transactions go through our Discord server</h3>
                     <button class="join">Discord<i class="fa-brands fa-discord"></i></button>
                 </div>    
             </div>
             <div class="descr">
-                <h1 class="descr">Description:</h1>
-                <h2>Commands:</h2>
+                <h2 class="descr_txt">Description:</h2>
+                <p>${card.description}</p>
+                <p>${card.description2}</p>
+                <p>${card.description3}</p>
+                <h2 class="descr_com">Commands:</h2>
                 <ul>
                     <li>${card.command}</li>
                     <li>${card.command2}</li>
@@ -132,7 +143,8 @@
                     <li>${card.command9}</li>
                     <li>${card.command10}</li>
                 </ul>
-                <h2>Bonus:</h2>
+                <h2 class="descr_bon">Bonus: ${card.bonus} </h2>
+               
 
             </div>
             </div>

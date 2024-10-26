@@ -18,17 +18,22 @@ document.addEventListener("mousemove", function (e) {
 
 // dinamic page
 document.addEventListener("DOMContentLoaded", function () {
-  const card = document.querySelectorAll(".Mor_inf");
-  const home_btn = document.querySelector(".Home");
+  const cards = document.querySelectorAll(".Mor_inf");
+  const homeBtn = document.querySelector(".Home_btn");
 
-  card.forEach(function (cycle) {
-    cycle.addEventListener("click", function () {
-      const cardId = cycle.getAttribute("data-id");
-      console.log(cardId);
-      window.location.href = `detail.html?id=${cardId}`;
+  if (cards) {
+    cards.forEach(function (cycle) {
+      cycle.addEventListener("click", function () {
+        const cardId = cycle.getAttribute("data-id");
+        console.log(cardId);
+        window.location.href = `detail.html?id=${cardId}`;
+      });
     });
-    home_btn.addEventListener("click", function () {
+  }
+
+  if (homeBtn) {
+    homeBtn.addEventListener("click", function () {
       window.location.href = "index.html";
     });
-  });
+  }
 });

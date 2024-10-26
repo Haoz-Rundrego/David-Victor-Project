@@ -48,23 +48,55 @@ body {
 }
 
 /* hom */
-.Home {
-    padding-top: 25px;
-    color: #0b1bf6;
-    background-color: #74716e;
-    width: 355;
-    height: 80;
-    font-size: 45px;
-    border-radius: 25%;
-    text-shadow: 0 -1px 1px #9dcaed,
-        0 -2px 2px #719dde,
-        0 -3px 3px #5074d7,
-        0 -10px 20px #3761f8,
-        0 -20px 30px #1d2ff3;
-    padding-left: 15px;
-    padding-right: 15px;
+.home_div {
+    margin-top: 30px;
 }
 
+
+.Home_btn {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(32, 136, 255);
+    background: linear-gradient(0deg, rgb(7, 177, 255) 0%, rgb(61, 47, 255) 100%);
+}
+
+.Home_btn:hover {
+    color: #03c4ff;
+    background: transparent;
+    box-shadow: none;
+}
+
+.Home_btn:before,
+.Home_btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #3e09ff;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.Home_btn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.Home_btn:hover:before,
+.Home_btn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
 
 /* part 1 */
 .Part1 {
